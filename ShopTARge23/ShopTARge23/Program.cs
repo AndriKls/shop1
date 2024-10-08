@@ -4,6 +4,17 @@ using ShopTARge23.ApplicationServices.Services;
 using ShopTARge23.Core.ServiceInterface;
 using ShopTARge23.Data;
 
+//Teha uus CRUD e lisamine, vataamine, uuendamine ja andmete kustutamine.
+//Teha uus branch.
+//Teemaks on Kindergarten.
+//Muutujateks on Id, GroupName, ChildrenCount, KindergartenName, Teacher, CreatedAt ja UpdatedAt.
+//NB! Piltide lisamist ei tee.
+//Töö on hindeline. Töö panna githubi ja link saata emailile.
+ 
+//Õpetus, kuidas teha uut branchi:
+//https://www.youtube.com/watch?v=DYStzH7L6EQ
+//https://www.youtube.com/watch?v=8-EqOFXjV8Q
+//Tunnis vaatan töö üle.
 
 namespace ShopTARge23
 {
@@ -18,7 +29,7 @@ namespace ShopTARge23
 
             builder.Services.AddScoped<ISpaceshipsServices, SpaceshipsServices>();
             builder.Services.AddScoped<IFileServices, FileServices>();
-            builder.Services.AddScoped<IRealEstateServices, RealEstateServices>();
+            builder.Services.AddScoped<IKindergartenServices, KindergartenServices>();
 
             builder.Services.AddDbContext<ShopTARge23Context>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
